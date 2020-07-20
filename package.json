@@ -2,33 +2,98 @@
   "name": "github-user-search",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+  "description": "GitHub User Search",
+  "author": {
+    "name": "Angeline Chew",
+    "email": "chewmunyoke@users.noreply.github.com",
+    "url": "https://github.com/chewmunyoke"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "lint": "eslint ./src/",
+    "start": "BROWSER=none EXTEND_ESLINT=true react-scripts start",
+    "build": "EXTEND_ESLINT=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "standard"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "babel",
+      "react"
+    ],
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "camelcase": 1,
+      "no-undef": 1,
+      "no-unused-vars": 1,
+      "space-before-function-paren": 0
+    }
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.55",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1",
+    "parse-link-header": "^1.0.1",
+    "query-string": "^6.13.1",
+    "react-helmet": "^6.0.0",
+    "redux-logger": "^3.0.6"
   }
 }

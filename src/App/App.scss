@@ -1,0 +1,45 @@
+$themePrimaryColor500: #607d8b;
+$themePrimaryColor100: #cfd8dc;
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Roboto', 'Helvetica', 'Arial', 'Microsoft YaHei', '微软雅黑', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+#root {
+  height: 100vh;
+}
+
+a {
+  color: $themePrimaryColor500;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 1em;
+    &:not(:last-child) {
+      border-bottom: 1px solid $themePrimaryColor100;
+    }
+  }
+}
