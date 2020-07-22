@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "chewmunyoke5"
+  },
+  "targets": {
+    "chewmunyoke5": {
+      "hosting": {
+        "gh-user-search": [
+          "gh-user-search"
+        ]
+      }
+    }
+  }
+}
